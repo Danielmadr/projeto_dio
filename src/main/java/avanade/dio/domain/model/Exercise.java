@@ -15,4 +15,8 @@ public class Exercise {
     private int sets;
     private int reps;
     private double weight;
+
+    @ManyToOne
+    @JoinColumn(name = "workout_plan_id")
+    private WorkoutPlan workoutPlan;
 }
