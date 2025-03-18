@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User user) {
-        if (userRepository.ExistsByEmail(user.getEmail())) {
+        if (userRepository.existsByEmail(user.getEmail())) {
             throw new IllegalArgumentException("Email already registered");
         }
         return userRepository.save(user);
