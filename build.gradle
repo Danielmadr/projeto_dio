@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.2'
 	id 'io.spring.dependency-management' version '1.1.2'
+	id 'io.freefair.lombok' version '6.6.3' // Adicione esta linha
 }
 
 group = 'avanade.dio'
@@ -18,6 +19,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 	// OpenAPI (Swagger) https://github.com/springdoc/springdoc-openapi
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
 
@@ -25,6 +27,10 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Adicione esta linha para incluir a dependência do Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.28'
+	annotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
 
 tasks.jar {
