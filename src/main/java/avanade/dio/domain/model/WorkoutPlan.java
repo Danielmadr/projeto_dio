@@ -1,10 +1,13 @@
 package avanade.dio.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.List;
 
 @Entity
 @Table(name = "workout_plans")
+@Data
 public class WorkoutPlan {
 
     @Id

@@ -1,10 +1,13 @@
 package avanade.dio.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.Date;
 
 @Entity
 @Table(name = "members")
+@Data
 public class Member extends User {
 
     private String membershipType;
